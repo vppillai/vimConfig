@@ -9,6 +9,7 @@ set shiftwidth=2
 "set expandtab
 set hidden
 set autochdir 
+set splitright "vsplit open new file in right pane
 
 "ominicomplete options
 set nocp
