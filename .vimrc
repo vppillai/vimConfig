@@ -1,6 +1,7 @@
 set autoindent
 set smartindent
 set hlsearch
+set spell
 
 set nu                          "enable line numbers
 set background=dark             "set background color mode to dark
