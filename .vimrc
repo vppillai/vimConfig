@@ -17,11 +17,28 @@ set hidden                      "allows hiding buffers with changes when moving 
 set autochdir                   "change current dir according to file open in buffer
 set splitright                  "vsplit open new file in right pane
 
-"ominicomplete options
-set nocp                        "disable compatibility mode
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-set tags+=$TAGS_DB
+" Vundle vimrc
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-runtime macros/matchit.vim      " % matching for many file types inclyding html and xml
-filetype indent on              " = based intending for many file types
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+let g:ycm_confirm_extra_conf = 0 
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
+" End configuration, makes the plugins available
+call vundle#end()
+filetype plugin indent on
+map <C-]> :YcmCompleter GoToImprecise<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
