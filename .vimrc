@@ -18,6 +18,7 @@ set autochdir                   "change current dir according to file open in bu
 set splitright                  "vsplit open new file in right pane
 
 "clone vundle : git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 " Vundle vimrc
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -33,14 +34,29 @@ let g:ycm_confirm_extra_conf = 0
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" youCompleteMe for code completion. run installation process after Plugin is
+" pulled in
 Plugin 'Valloric/YouCompleteMe'
-"so that we can run :YcmGenerateConfig
 Plugin 'rdnetto/YCM-Generator'
 
-" End configuration, makes the plugins available
-call vundle#end()
+" YCM configurations and kwymaps
 filetype plugin indent on
 map <C-]> :YcmCompleter GoToImprecise<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"vimAirline 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1 
+set laststatus=2   "to see airline without having to split
+set noshowmode     " to not show current mode in airline
+let g:airline_powerline_fonts = 1
+set t_Co=256
+let g:airline_theme='base16_grayscale'
+
+"Git wrapper for Vim
+Plugin 'tpope/vim-fugitive'
+" End configuration, makes the plugins available
+call vundle#end()
