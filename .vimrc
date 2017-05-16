@@ -17,6 +17,7 @@ set hidden                      "allows hiding buffers with changes when moving 
 set autochdir                   "change current dir according to file open in buffer
 set splitright                  "vsplit open new file in right pane
 
+"clone vundle : git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " Vundle vimrc
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -33,6 +34,7 @@ let g:ycm_confirm_extra_conf = 0
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
+"so that we can run :YcmGenerateConfig
 Plugin 'rdnetto/YCM-Generator'
 
 " End configuration, makes the plugins available
