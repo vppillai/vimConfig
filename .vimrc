@@ -16,6 +16,7 @@ set expandtab                   "replace tab with two spaces
 set hidden                      "allows hiding buffers with changes when moving to a different buffer.
 "set autochdir                   "change current dir according to file open in buffer
 set splitright                  "vsplit open new file in right pane
+set comments=
 
 " Vundle vimrc
 set nocompatible              " be iMproved, required
@@ -62,6 +63,21 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 noremap \\ :NERDTreeToggle<CR>
 noremap \f :NERDTreeFind<CR>
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" UltiSnips triggering
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " End configuration, makes the plugins available
 call vundle#end()
 
