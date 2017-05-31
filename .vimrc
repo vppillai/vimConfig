@@ -94,6 +94,9 @@ if has("cscope")
   " if you want the reverse search order.
   set csto=0
 
+  " dont show msg when any other cscope db added. If shown, it fails nmaps
+  set nocscopeverbose  
+
   " add any cscope database in current directory
   if filereadable("cscope.out")
     cs add cscope.out  
@@ -101,9 +104,6 @@ if has("cscope")
   elseif $CSCOPE_DB != ""
     cs add $CSCOPE_DB
   endif
-
-  " show msg when any other cscope db added
-  set cscopeverbose  
 
   nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>  
   nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>  
