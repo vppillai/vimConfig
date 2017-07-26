@@ -1,4 +1,4 @@
-vimConfig
+# vimConfig
 =========
 
 place vim configuration in ~/.vimrc
@@ -11,8 +11,15 @@ Then run `:PluginInstall`
 compile YCM : 
 
 ```
-sudo apt-get install build-essential cmake python-dev python3-dev
+sudo apt-get install build-essential cmake python-dev python3-dev cscope
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 
 ```
+
+# Shortcuts and keymaps
+
+## NerdTree
+
+- `\\` Toggle NerdTree
+- `\f` Find current file in NerdTree
