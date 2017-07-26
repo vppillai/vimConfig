@@ -1,6 +1,14 @@
 # vimConfig
 =========
 
+Install prerequsites
+
+```
+
+sudo apt-get install build-essential cmake python-dev python3-dev cscope
+
+```
+
 place vim configuration in ~/.vimrc
 
 Install vundle
@@ -11,7 +19,6 @@ Then run `:PluginInstall`
 compile YCM : 
 
 ```
-sudo apt-get install build-essential cmake python-dev python3-dev cscope
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 
