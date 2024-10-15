@@ -1,3 +1,8 @@
+# shopt
+========
+
+> shopt -s autocd direxpand dirspell histverify checkwinsize cdspell cdable_vars
+
 # vimConfig
 =========
 
